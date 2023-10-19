@@ -1,8 +1,8 @@
-import { TodoList } from "../Organisms/TodoList";
+import { TodoList } from "../../Organisms/TodoList";
 import styles from "./styles.module.css";
-import { AddTodo } from "../Organisms/AddTodo";
-import { InputForm } from "../atoms/InputForm";
-import { useTodoContext } from "../../Contexts";
+import { AddTodo } from "../../Organisms/AddTodo";
+import { InputForm } from "../../atoms/InputForm";
+import { useTodoContext } from "../../../Contexts";
 
 export const TodoTemplate = () => {
   const {
