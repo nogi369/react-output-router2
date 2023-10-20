@@ -39,7 +39,7 @@ export const useTodo = () => {
   };
 
   // Todo削除処理
-  const handleDeleteTodo = (targetId, targetTitle) => {
+  const deleteTodo = (targetId, targetTitle) => {
     if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
       const newTodos = originTodoList.filter((todo) => todo.id !== targetId);
 
@@ -57,6 +57,6 @@ export const useTodo = () => {
     handleAddTodo,
     onChangeAddInputValue,
     handleChangeSearchKeyword,
-    handleDeleteTodo,
+    deleteTodo,
   };
 };

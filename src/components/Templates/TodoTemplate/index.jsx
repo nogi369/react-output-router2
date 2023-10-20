@@ -1,45 +1,40 @@
+/**
+ * TodoTemplate
+ *
+ * @package components
+ */
 import { TodoList } from "../../Organisms/TodoList";
 import styles from "./styles.module.css";
-import { AddTodo } from "../../Organisms/AddTodo";
 import { InputForm } from "../../atoms/InputForm";
 import { useTodoContext } from "../../../Contexts";
+import { BaseLayout } from "../../Organisms/BaseLayout";
+
+/**
+ * TodoTemplate
+ * @returns {JSX.Element}
+ * @constructor
+ */
 
 export const TodoTemplate = () => {
-  const {
-    addInputValue,
-    searchKeyword,
-    showTodoList,
-    handleAddTodo,
-    onChangeAddInputValue,
-    handleChangeSearchKeyword,
-    handleDeleteTodo,
-  } = useTodoContext();
+  const { searchKeyword, showTodoList, handleChangeSearchKeyword, deleteTodo } =
+    useTodoContext();
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Todo List</h1>
-      <section className={styles.common}>
-        <AddTodo
-          addInputValue={addInputValue}
-          handleAddTodo={handleAddTodo}
-          onChnageTodo={onChangeAddInputValue}
-        />
-      </section>
-      <section className={styles.common}>
-        <InputForm
-          handleChangeValue={handleChangeSearchKeyword}
-          inputValue={searchKeyword}
-          placeholder={"Search Keyword"}
-        />
-      </section>
-      <section className={styles.common}>
-        {showTodoList.length > 0 && (
-          <TodoList
-            todoList={showTodoList}
-            handleDeleteTodo={handleDeleteTodo}
+    <BaseLayout title={"TodoList"}>
+      <div className={styles.container}>
+        <div className={styles.area}>
+          <InputForm
+            onChange={handleChangeSearchKeyword}
+            value={searchKeyword}
+            placeholder={"Search Keyword"}
           />
-        )}
-      </section>
-    </div>
+        </div>
+        <div className={styles.area}>
+          {showTodoList.length > 0 && (
+            <TodoList todoList={showTodoList} handleDeleteTodo={deleteTodo} />
+          )}
+        </div>
+      </div>
+    </BaseLayout>
   );
 };

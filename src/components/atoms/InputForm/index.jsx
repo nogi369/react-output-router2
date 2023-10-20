@@ -1,18 +1,13 @@
 import styles from "./styles.module.css";
 
-export const InputForm = ({
-  handleChangeValue,
-  handleKeyDown,
-  inputValue,
-  placeholder,
-}) => {
+export const InputForm = ({ onChange, onKeyDown, value, placeholder }) => {
   return (
     <input
       className={styles.input}
       type="text"
-      onChange={handleChangeValue}
-      onKeyDown={handleKeyDown}
-      value={inputValue}
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      value={value}
       placeholder={placeholder}
     />
   );

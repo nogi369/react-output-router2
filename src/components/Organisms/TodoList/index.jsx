@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-export const TodoList = ({ todoList, handleDeleteTodo }) => {
+export const TodoList = ({ todoList, deleteTodo }) => {
   return (
     <div>
       <ul className={styles.list}>
@@ -13,7 +13,7 @@ export const TodoList = ({ todoList, handleDeleteTodo }) => {
               className={styles.far}
               icon={faTrashAlt}
               size="lg"
-              onClick={() => handleDeleteTodo(todo.id)}
+              onClick={() => deleteTodo(todo.id)}
             />
           </li>
         ))}
