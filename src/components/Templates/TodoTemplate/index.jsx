@@ -19,8 +19,8 @@ import styles from "./styles.module.css";
 export const TodoTemplate = () => {
   const { originTodoList, deleteTodo } = useTodoContext();
 
+  // local state
   const [searchKeyword, setSearchKeyword] = useState("");
-  // 表示用Todoリスト
   const showTodoList = useMemo(() => {
     return originTodoList.filter((todo) => {
       const regExp = new RegExp("^" + searchKeyword, "i");
