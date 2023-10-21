@@ -1,3 +1,3 @@
-import { CreateTemplate } from "../Templates/CreateTemplate";
+import { TodoCreateTemplate } from "../Templates/TodoCreateTemplate";
 
-export const CreatePage = () => <CreateTemplate />;
+export const CreatePage = () => <TodoCreateTemplate />;

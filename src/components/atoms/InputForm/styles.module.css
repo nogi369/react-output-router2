@@ -11,6 +11,10 @@
   border-radius: 5px;
 }
 
+.input::placeholder {
+  color: #c0c0c0;
+}
+
 /* rgba
 https://www.sejuku.net/blog/84428 */
 /* box-sizing

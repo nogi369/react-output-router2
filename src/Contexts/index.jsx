@@ -5,26 +5,14 @@ import { useTodo } from "../hooks/useTodo";
 export const TodoContext = createContext({});
 
 export const TodoProvider = ({ children }) => {
-  const {
-    addInputValue,
-    searchKeyword,
-    showTodoList,
-    handleAddTodo,
-    onChangeAddInputValue,
-    handleChangeSearchKeyword,
-    deleteTodo,
-  } = useTodo();
+  const { originTodoList, addTodo, deleteTodo } = useTodo();
 
   return (
     // 作成したcontextオブジェクトを子コンポーネントに渡す
     <TodoContext.Provider
       value={{
-        addInputValue,
-        searchKeyword,
-        showTodoList,
-        handleAddTodo,
-        onChangeAddInputValue,
-        handleChangeSearchKeyword,
+        originTodoList,
+        addTodo,
         deleteTodo,
       }}
     >

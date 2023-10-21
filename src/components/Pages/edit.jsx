@@ -1,3 +1,3 @@
-import { EditTemplate } from "../Templates/EditTemplate";
+import { TodoEditTemplate } from "../Templates/TodoEditTemplate";
 
-export const EditPage = () => <EditTemplate />;
+export const EditPage = () => <TodoEditTemplate />;
