@@ -43,7 +43,7 @@ export const TodoTemplate = () => {
         </div>
         <div className={styles.area}>
           {showTodoList.length > 0 && (
-            <TodoList todoList={showTodoList} handleDeleteTodo={deleteTodo} />
+            <TodoList todoList={showTodoList} deleteTodo={deleteTodo} />
           )}
         </div>
       </div>

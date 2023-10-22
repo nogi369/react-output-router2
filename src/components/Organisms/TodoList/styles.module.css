@@ -3,6 +3,9 @@
 }
 
 .todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   margin-bottom: 10px;
   list-style: none;
@@ -24,11 +27,18 @@
   color: #fff;
 }
 
+.area {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 130px;
+  height: 30px;
+}
+
 .far {
+  display: block;
   cursor: pointer;
-  position: absolute;
-  top: 24px;
-  right: 10px;
-  width: 30px;
-  color: #f90;
+  width: 40px;
+  height: 40px;
+  color: #ff9900;
 }

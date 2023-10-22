@@ -5,11 +5,18 @@
  *
  * @package constants
  */
-export const BASE_URL = "/react-output-router2";
+export const BASE_PATH = "/react-output-router2";
 
 export const NAVIGATION_LIST = {
-  TOP: `${BASE_URL}/`,
-  DETAIL: `${BASE_URL}/detail/:id`,
-  CREATE: `${BASE_URL}/create`,
-  EDIT: `${BASE_URL}/edit/:id`,
+  TOP: `${BASE_PATH}/`,
+  DETAIL: `${BASE_PATH}/detail/:id`,
+  CREATE: `${BASE_PATH}/create`,
+  EDIT: `${BASE_PATH}/edit/:id`,
+};
+
+export const NAVIGATION_PATH = {
+  TOP: `${BASE_PATH}/`,
+  DETAIL: `${BASE_PATH}/detail/`,
+  CREATE: `${BASE_PATH}/create/`,
+  EDIT: `${BASE_PATH}/edit/`,
 };

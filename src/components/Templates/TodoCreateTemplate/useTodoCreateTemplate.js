@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router";
-import { NAVIGATION_LIST } from "../../../constants/navigations";
+import { NAVIGATION_PATH } from "../../../constants/navigations";
 
 export const useTodoCreateTemplate = ({ addTodo }) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export const useTodoCreateTemplate = ({ addTodo }) => {
       e.preventDefault();
       if (inputTitle !== "" && inputContent !== "") {
         addTodo(inputTitle, inputContent);
-        navigate(NAVIGATION_LIST.TOP);
+        navigate(NAVIGATION_PATH.TOP);
       }
     },
     [addTodo, inputTitle, inputContent, navigate]
