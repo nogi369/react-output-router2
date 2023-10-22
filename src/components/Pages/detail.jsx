@@ -1,3 +1,3 @@
-import { DetailTemplate } from "../Templates/TodoDetailTemplate";
+import { TodoDetailTemplate } from "../Templates/TodoDetailTemplate";
 
-export const DetailPage = () => <DetailTemplate />;
+export const DetailPage = () => <TodoDetailTemplate />;
