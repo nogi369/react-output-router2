@@ -5,7 +5,7 @@ import { useTodo } from "../hooks/useTodo";
 export const TodoContext = createContext({});
 
 export const TodoProvider = ({ children }) => {
-  const { originTodoList, addTodo, deleteTodo } = useTodo();
+  const { originTodoList, addTodo, updateTodo, deleteTodo } = useTodo();
 
   return (
     // 作成したcontextオブジェクトを子コンポーネントに渡す
@@ -13,6 +13,7 @@ export const TodoProvider = ({ children }) => {
       value={{
         originTodoList,
         addTodo,
+        updateTodo,
         deleteTodo,
       }}
     >

@@ -8,14 +8,15 @@ export const useTodoCreateTemplate = ({ addTodo }) => {
   const [inputTitle, setInputTitle] = useState("");
   const [inputContent, setInputContent] = useState("");
 
+  // タイトル変更処理
   const handleChangeTitle = useCallback((e) => {
     setInputTitle(e.target.value);
   }, []);
-
+  // コンテンツ変更処理
   const handleChangeContent = useCallback((e) => {
     setInputContent(e.target.value);
   }, []);
-
+  // 新規登録実行処理
   const handleCreateTodo = useCallback(
     (e) => {
       e.preventDefault();

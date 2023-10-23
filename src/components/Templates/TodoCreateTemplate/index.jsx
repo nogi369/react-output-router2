@@ -1,10 +1,10 @@
 import { BaseLayout } from "../../Organisms/BaseLayout";
-import styles from "./styles.module.css";
 import { InputForm } from "../../atoms/InputForm";
 import { TextArea } from "../../atoms/TextArea";
 import { CommonButton } from "../../atoms/CommonButton";
 import { useTodoContext } from "../../../Contexts";
 import { useTodoCreateTemplate } from "./useTodoCreateTemplate";
+import styles from "./styles.module.css";
 
 export const TodoCreateTemplate = () => {
   const { addTodo } = useTodoContext();

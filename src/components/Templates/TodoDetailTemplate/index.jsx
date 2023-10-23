@@ -6,7 +6,9 @@ import { useTodoContext } from "../../../Contexts";
 import { useParams } from "react-router-dom";
 
 export const TodoDetailTemplate = () => {
+  // グローバルstate取得
   const { originTodoList } = useTodoContext();
+  // Todo定義
   const { id } = useParams();
   const todo = originTodoList.find((todo) => String(todo.id) === id);
 

@@ -24,6 +24,24 @@ export const useTodo = () => {
     [originTodoList, uniqueId]
   );
 
+  // Todo更新処理
+  const updateTodo = useCallback(
+    (id, title, content) => {
+      const updateTodoList = originTodoList.map((todo) => {
+        if (id === todo.id) {
+          return {
+            id: todo.id,
+            title: title,
+            content: content,
+          };
+        }
+        return todo;
+      });
+      setOriginTodoList(updateTodoList);
+    },
+    [originTodoList]
+  );
+
   // Todo削除処理
   const deleteTodo = (targetId, targetTitle) => {
     if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
@@ -36,6 +54,7 @@ export const useTodo = () => {
   return {
     originTodoList,
     addTodo,
+    updateTodo,
     deleteTodo,
   };
 };
