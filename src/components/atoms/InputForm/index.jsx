@@ -6,16 +6,14 @@ export const InputForm = ({
   onKeyDown,
   value,
   placeholder,
-}) => {
-  return (
-    <input
-      disabled={disabled}
-      className={styles.input}
-      type="text"
-      onChange={onChange}
-      onKeyDown={onKeyDown}
-      value={value}
-      placeholder={placeholder}
-    />
-  );
-};
+}) => (
+  <input
+    disabled={disabled}
+    className={styles.input}
+    type="text"
+    onChange={onChange}
+    onKeyDown={onKeyDown}
+    value={value}
+    placeholder={placeholder}
+  />
+);

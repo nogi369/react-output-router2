@@ -12,6 +12,7 @@ export const TodoDetailTemplate = () => {
   const { id } = useParams();
   const todo = originTodoList.find((todo) => String(todo.id) === id);
 
+  // disabled : https://www.delftstack.com/ja/howto/react/disable-button-in-react/
   return (
     <BaseLayout title={"TodoDetail"}>
       {!!todo && (
