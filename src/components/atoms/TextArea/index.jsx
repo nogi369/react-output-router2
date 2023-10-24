@@ -5,14 +5,12 @@ export const TextArea = ({
   placeholder,
   value,
   onChange,
-}) => {
-  return (
-    <textarea
-      disabled={disabled}
-      className={styles.text}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    />
-  );
-};
+}) => (
+  <textarea
+    disabled={disabled}
+    className={styles.text}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+  />
+);

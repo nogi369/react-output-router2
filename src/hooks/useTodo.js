@@ -43,13 +43,18 @@ export const useTodo = () => {
   );
 
   // Todo削除処理
-  const deleteTodo = (targetId, targetTitle) => {
-    if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
-      const newTodos = originTodoList.filter((todo) => todo.id !== targetId);
+  const deleteTodo = useCallback(
+    (targetId, targetTitle) => {
+      if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
+        const newTodoList = originTodoList.filter(
+          (todo) => todo.id !== targetId
+        );
 
-      setOriginTodoList(newTodos);
-    }
-  };
+        setOriginTodoList(newTodoList);
+      }
+    },
+    [originTodoList]
+  );
 
   return {
     originTodoList,
