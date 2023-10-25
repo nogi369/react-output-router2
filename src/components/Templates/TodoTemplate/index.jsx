@@ -3,12 +3,12 @@
  *
  * @package components
  */
-import { useMemo, useState } from "react";
 import { TodoList } from "../../Organisms/TodoList";
 import { InputForm } from "../../atoms/InputForm";
 import { useTodoContext } from "../../../Contexts";
-import { BaseLayout } from "../../Organisms/BaseLayout";
+import { BaseLayout } from "../../organisms/BaseLayout";
 import styles from "./styles.module.css";
+import { useTodoTemplate } from "./useTodoTemplate";
 
 /**
  * TodoTemplate
@@ -18,18 +18,8 @@ import styles from "./styles.module.css";
 
 export const TodoTemplate = () => {
   const { originTodoList, deleteTodo } = useTodoContext();
-
-  // local state
-  const [searchKeyword, setSearchKeyword] = useState("");
-  const showTodoList = useMemo(() => {
-    return originTodoList.filter((todo) => {
-      const regExp = new RegExp("^" + searchKeyword, "i");
-      return todo.title.match(regExp);
-    });
-  }, [originTodoList, searchKeyword]);
-
-  // 検索キーワード変更処理
-  const handleChangeSearchKeyword = (e) => setSearchKeyword(e.target.value);
+  const [{ searchKeyword, showTodoList }, { handleChangeSearchKeyword }] =
+    useTodoTemplate({ originTodoList });
 
   return (
     <BaseLayout title={"TodoList"}>

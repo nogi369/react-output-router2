@@ -38,7 +38,8 @@ export const useTodoEditTemplate = ({ originTodoList, updateTodo }) => {
         navigate(NAVIGATION_PATH.TOP);
       }
     },
-    [navigate, todo.id, inputTitle, inputContent, updateTodo]
+    // todo.id => todo?.id
+    [navigate, todo?.id, inputTitle, inputContent, updateTodo]
   );
 
   const states = {

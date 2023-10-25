@@ -1,4 +1,4 @@
-import { BaseLayout } from "../../Organisms/BaseLayout";
+import { BaseLayout } from "../../organisms/BaseLayout";
 import { InputForm } from "../../atoms/InputForm";
 import { TextArea } from "../../atoms/TextArea";
 import { CommonButton } from "../../atoms/CommonButton";
@@ -15,7 +15,7 @@ export const TodoCreateTemplate = () => {
 
   return (
     <BaseLayout title={"Create Todo"}>
-      <form className={styles.container} onClick={handleCreateTodo}>
+      <form className={styles.container} onSubmit={handleCreateTodo}>
         <div className={styles.area}>
           <InputForm
             value={inputTitle}

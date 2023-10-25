@@ -1,9 +1,9 @@
-import { BaseLayout } from "../../Organisms/BaseLayout";
-import styles from "./styles.module.css";
 import { InputForm } from "../../atoms/InputForm";
 import { TextArea } from "../../atoms/TextArea";
-import { useTodoContext } from "../../../Contexts";
 import { useParams } from "react-router-dom";
+import { BaseLayout } from "../../organisms/BaseLayout";
+import { useTodoContext } from "../../../Contexts";
+import styles from "./styles.module.css";
 
 export const TodoDetailTemplate = () => {
   // グローバルstate取得

@@ -1,4 +1,4 @@
-import { BaseLayout } from "../../Organisms/BaseLayout";
+import { BaseLayout } from "../../organisms/BaseLayout";
 import { InputForm } from "../../atoms/InputForm";
 import { TextArea } from "../../atoms/TextArea";
 import { CommonButton } from "../../atoms/CommonButton";
